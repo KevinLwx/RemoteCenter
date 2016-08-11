@@ -14,6 +14,7 @@
 		E82351261D55F6C50002659B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E82351241D55F6C50002659B /* LaunchScreen.storyboard */; };
 		E82351311D55F6C50002659B /* RemoteCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82351301D55F6C50002659B /* RemoteCenterTests.swift */; };
 		E823513C1D55F6C50002659B /* RemoteCenterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E823513B1D55F6C50002659B /* RemoteCenterUITests.swift */; };
+		E823514A1D55F9D70002659B /* ESLPod1231.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E82351491D55F9D70002659B /* ESLPod1231.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E82351371D55F6C50002659B /* RemoteCenterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemoteCenterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E823513B1D55F6C50002659B /* RemoteCenterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCenterUITests.swift; sourceTree = "<group>"; };
 		E823513D1D55F6C50002659B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E82351491D55F9D70002659B /* ESLPod1231.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ESLPod1231.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		E823511A1D55F6C50002659B /* RemoteCenter */ = {
 			isa = PBXGroup;
 			children = (
+				E82351491D55F9D70002659B /* ESLPod1231.mp3 */,
 				E823511B1D55F6C50002659B /* AppDelegate.swift */,
 				E823511D1D55F6C50002659B /* ViewController.swift */,
 				E823511F1D55F6C50002659B /* Main.storyboard */,
@@ -193,6 +196,11 @@
 				TargetAttributes = {
 					E82351171D55F6C50002659B = {
 						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					E823512B1D55F6C50002659B = {
 						CreatedOnToolsVersion = 7.3;
@@ -231,6 +239,7 @@
 			files = (
 				E82351261D55F6C50002659B /* LaunchScreen.storyboard in Resources */,
 				E82351231D55F6C50002659B /* Assets.xcassets in Resources */,
+				E823514A1D55F9D70002659B /* ESLPod1231.mp3 in Resources */,
 				E82351211D55F6C50002659B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

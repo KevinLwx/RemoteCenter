@@ -7,19 +7,36 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var rateLabel: UILabel!
+    @IBOutlet weak var rateStepper: UIStepper!
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let player = appDelegate.player
+        
+        player?.addObserver(self, forKeyPath: "rate", options: [.Initial, .New], context: nil)
     }
+    
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        if let player = appDelegate.player {
+            rateLabel.text = "\(player.rate)"
+            rateStepper.value = Double(player.rate)
+        }
     }
-
+    
+    @IBAction func onValueChanged(sender: UIStepper) {
+       
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.player!.rate = Float(sender.value)
+    }
 
 }
 
